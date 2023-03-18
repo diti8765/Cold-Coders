@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+*{
+margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+   
+body{
+    width:100%;
+    height:100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(45deg, #0a0a0a, rgb(73, 71, 85));
+}
+.calculator{
+        width:35%;
+        height: 90%;
+        border: 2px solid white;
+        padding: 10px;
+        border-radius: 8px;
+        background-color: transparent;
+        box-shadow: 0px 3px 15px rgba(113, 115, 119, 0.5);
+}
+input{
+    width: 100%;
+    height: 60px;
+    border: 2px solid rgb(159, 155, 155);
+    margin: 4px;
+    padding: 20px;
+    background: transparent;
+    box-shadow: 0px 3px 15px rgbs(84, 84, 84, 0.1);
+    font-size: 25px;
+    text-align: right;
+    cursor: pointer;
+    color: white;
+    border-radius: 10px;
+
+}
+input::placeholder{
+    color: whitesmoke;
+    
+}
+.btns{
+   
+    width: 100%;
+    height: 450px;
+    display:flex;
+    justify-content: center;
+    align-items:center ;
+    flex-direction: column;
+}
+.btns .row button{
+    border: none;
+    width: 50px;
+    height: 50px;
+     margin : 8px;
+     
+     margin-block-start: 3px;
+     
+    border-radius: 40%;
+    background: transparent;
+    color: white;
+    font-size: 18px;
+    box-shadow: -8px -8px 15px rgba(255, 255, 255,0.1);
+}
+.btns .row button:hover
+{
+   box-shadow: inset 5px 5px 6px rgb(226, 223, 218);
+   transition: .2s;
+}
+
+
+
+
+ #eqbtn{
+    background-color: rgb(244, 122, 41);
+    border-radius: 5px;
+    width: 120px;
+ }
+ #ac
+ {
+    background-color: rgb(44, 232, 97);
+    border-radius: 0%;
+ }
+ #del
+ {
+    background-color: rgb(246, 68, 68);
+    border-radius: 0%;
+ }
+
+ .operator{
+    color: greenyellow;
+ }
+
+ .btns .row .long
+ {
+    width: 130px;
+    border-radius: 10px;
+
+ }
+
+ 
+
+#screen{ 
+ width: 100%;
+ height: 120px;
+ font-size: 34px;
+}
+#op{
+    background-color: #514e4e;
+}
+
+
+
+
+
+
+
+
+
+
