@@ -28,6 +28,11 @@ var screen=document.querySelector('#screen');
      screen.value=Math.tan(screen.value);
     }
 
+function pow2(){
+       var a=screen.value;
+       screen.value=a**2;
+}
+
     function pow()
     {
            var a=parseFloat(document.getElementById("screen1").value),b=parseFloat(document.getElementById("screen2").value);
