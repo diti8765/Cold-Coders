@@ -200,7 +200,6 @@ screen.value="not prime number";
  } 
     
 
-    
 
 
 
