@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CALCULATOR</title>
   <link rel="stylesheet" href="new style.css">
-  
+  <script src="new script.js"></script>
 </head>
 
 <body>
@@ -26,7 +26,7 @@
                 <div class="btns">
 
                 <div class="row">
-                <button id="ac" onclick="screen.value=''">AC</button>
+                <button id="ac" onclick="clrdisp()">AC</button>
                 <button id="del" onclick="backspc()">DEL</button>
                 <button onclick="fact()">x!</button>
                 <button class="btn">(</button>
@@ -38,10 +38,10 @@
                 <div class="row">
                 <button onclick="lcm()">LCM</button>
                 <button onclick="hcf()">HCF</button>
-                <button onclick="pow()">x<span style="position:relative ; bottom: .4em; right: .1em;">2</span></button>
-                <button onclick="pow()">x<span style="position:relative ; bottom: .4em; right: .1em;">3</span></button>
+                <button onclick="isprime()">isp</button>
+                <button onclick="pow()">x<span style="position:relative ; bottom: .4em; right: .1em;">y</span></button>
                 <button onclick="sqrt()">√ </button>
-                <button onclick="e()" >e</button>
+                <button onclick="e()">e<span style="position:relative ; bottom: .4em; right: .1em;">y</span></button>
                 </div>
 
 
@@ -85,12 +85,11 @@
                 <button class="long" onclick="fibbo()">nth term of Fibonacci series</button>
                 <button class="btn">0</button>
                 <button class="btn">.</button>
-                <button id="eqbtn" onclick= "screen.value=eval(screen.value)">=</button>
+                <button id="eqbtn" onclick= "eql()">=</button>
                 </div>
         </div>    
     </div>
 
-    <script src="new script.js"></script>
     </body>
 
     </html>
