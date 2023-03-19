@@ -7,8 +7,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CALCULATOR</title>
-  <link rel="stylesheet" href="new style.css">
-  <script src="new script.js"></script>
+  <link rel="stylesheet" href="diti.css">
+  
 </head>
 
 <body>
@@ -26,7 +26,7 @@
                 <div class="btns">
 
                 <div class="row">
-                <button id="ac" onclick="clrdisp()">AC</button>
+                <button id="ac" onclick="screen.value=''">AC</button>
                 <button id="del" onclick="backspc()">DEL</button>
                 <button onclick="fact()">x!</button>
                 <button class="btn">(</button>
@@ -34,16 +34,22 @@
                 <button onclick="log()">ln</button>
                 </div>
 
-            
                 <div class="row">
                 <button onclick="lcm()">LCM</button>
                 <button onclick="hcf()">HCF</button>
+                <button onclick="pow()">x<span style="position:relative ; bottom: .4em; right: .1em;">2</span></button>
                 <button onclick="pow()">x<span style="position:relative ; bottom: .4em; right: .1em;">y</span></button>
-                <button onclick="pow2()">x<span style="position:relative ; bottom: .4em; right: .1em;">2</span></button>
                 <button onclick="sqrt()">√ </button>
-                <button onclick="e()">e<span style="position:relative ; bottom: .4em; right: .1em;">y</span></button>
+                <button onclick="e()" >e</button>
                 </div>
+  
+                <div class="row">
+                  <button class="long" onclick="dectobin()">Decimal⇢ Binary</button>
+                  <button class="long" onclick="isprime()">Is PRIME ?</button>
+                  <button class="long" onclick="fibbo()">nth term of Fibonacci series</button>
+                  </div>
 
+            
 
                 <div class="row">
                 <button class="long" onclick="bintodec()">Binary⇢ Decimal</button>
@@ -55,7 +61,7 @@
 
 
                 <div class="row">
-                <button class="long" onclick="dectobin()">Decimal⇢ Binary</button>
+                <button class="long" onclick="dectooct()">Decimal⇢ Octal</button>
                 <button class="btn">7</button>
                 <button class="btn">8</button>
                 <button class="btn">9</button>
@@ -64,7 +70,7 @@
             
             
                 <div class="row">
-                <button class="long" onclick="ramanujannum()">nth term of Ramanujan no.</button>
+                <button class="long" onclick="octtodec()">Octal⇢ Decimal</button>
                 <button class="btn">4</button>
                 <button class="btn">5</button>
                 <button class="btn">6</button>
@@ -73,7 +79,7 @@
 
            
                 <div class="row">
-                <button class="long" onclick="neilarmsnum">nth term of Armstrong no.</button>
+                <button class="long" onclick="neilarmsnum()">Is Armstrong no.?</button>
                 <button class="btn">1</button>
                 <button class="btn">2</button>
                 <button class="btn">3</button>
@@ -82,14 +88,15 @@
             
             
                 <div class="row">
-                <button class="long" onclick="fibbo()">nth term of Fibonacci series</button>
+                <button class="long" onclick="ramanujannum()">Is Ramanujan no.?</button>
                 <button class="btn">0</button>
                 <button class="btn">.</button>
-                <button id="eqbtn" onclick= "eql()">=</button>
+                <button id="eqbtn" onclick= "screen.value=eval(screen.value)">=</button>
                 </div>
         </div>    
     </div>
 
+    <script src="diti.js"></script>
     </body>
 
     </html>
