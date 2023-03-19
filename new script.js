@@ -132,6 +132,16 @@ a=parseInt(a/2);
 screen.value=b;
  }
 
+function dectooct(){
+var a=screen.value,k=0,b=0;
+while(a){
+b=b+a%8*(10**k);
+k++;
+a=parseInt(a/8);
+}
+screen.value=b;
+ }
+
  function fibbo(){
 var a=-1,b=1,c,n=screen.value,k=0;
 while(k<=n){
