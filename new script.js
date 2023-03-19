@@ -1,18 +1,6 @@
 var screen=document.querySelector('#screen');
        var btn=document.querySelectorAll('.btn');
-      //  var screen1=document.querySelector('#screen1');
-       // var btn=document.querySelectorAll('.btn');
-      //  var screen2=document.querySelector('#screen2');
-        //var btn=document.querySelectorAll('.btn');
-
-
-
-
-
-
-
-
-        for(item of btn)
+  for(item of btn)
 {
     item.addEventListener('click',(e)=>{
         btntext=e.target.innerText;
