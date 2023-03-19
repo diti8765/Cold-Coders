@@ -27,53 +27,55 @@ var screen=document.querySelector('#screen');
     {
      screen.value=Math.tan(screen.value);
     }
+
     function pow()
     {
-     screen.value=Math.pow(screen.value,3);
+           var a=parseFloat(document.getElementById("screen1").value),b=parseFloat(document.getElementById("screen2").value);
+     screen.value=a**b;
     }
+
     function sqrt()
     {
-     screen.value=Math.sqrt(screen.value,2);
+     var a=screen.value;
+     screen.value=a**0.5;
     }
+
     function log()
     {
      screen.value=Math.log(screen.value);
     }
-    function pi()
-    {
-     screen.value= 3.14159265359;
-    }
+
     function e()
     {
-     screen.value= 2.718281828459045;
+           var a=screen.value;
+     screen.value=2.718281828459045**a;
     }
+
     function fact()
     {
-        var i, num,f;
-        f=1
-        num=screen.value;
-        for(i=1; i<=num; i++)
+        var a=screen.value,f=1;
+           if(a==0)
+            screen.value=1;      
+           if(a>0){
+        while(a)
         {
-            f=f*i;
+            f=f*a;
+               a--;
         }
-        i=i-1;
      screen.value=f;
+           }
+           if(a<0)
+                  alert("factorial is not defined");
     }
+
+function clrdisp(){
+       document.getElementById("screen").value=" ";
+}
+
     function backspc()
     {
-     screen.value=screen.value.substr(0,screen.value.length-1);
-    }
-    
-    function hcf(){
-var a=parseInt(document.getElementById("screen1").value);
-var b=parseInt(document.getElementById("screen2").value);
-var c;
-for(i=1;i<=a<b?a:b;i++){
-if(a%i==0&&b%i==0)
-c=i;
-}
-screen.value=c;
-    }
+     document.getElementById("screen").value=document.getElementById("screen").value.toString().slice(0,-1);
+    }   
 
  function hcf(){
 var a=parseInt(document.getElementById("screen1").value),b=parseInt(document.getElementById("screen2").value),gcd;
@@ -301,9 +303,6 @@ var screen=document.querySelector('#screen');
     });
 }
 
-function clrdisp(){
-document.getElementById("screen").value=" ";
-}
 
     function cos()
     {
