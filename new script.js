@@ -41,7 +41,7 @@ var screen=document.querySelector('#screen');
      document.getElementById("screen").value=a**b;
     }
 //square of a number
-    function pow()
+    function pow1()
     {
            var a=document.getElementById("screen").value;
      document.getElementById("screen").value=a**2;
