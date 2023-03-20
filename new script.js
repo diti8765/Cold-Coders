@@ -51,28 +51,26 @@ var screen=document.querySelector('#screen');
     {
      screen.value=Math.log(screen.value);
     }
-    function pi()
-    {
-     screen.value= 3.14159265359;
-    }
-
     function e()
     {
-           var a=screen.value;
-     screen.value= 2.718281828459045**a;
+     screen.value= 2.718281828459045;
     }
 //factorial of a no.
     function fact()
     {
-        var i, num,f;
-        f=1
-        num=screen.value;
-        for(i=1; i<=num; i++)
+        var a=screen.value;
+           if(a==0)
+                 screen.value=1; 
+        if(a>0){
+        while(a)
         {
-            f=f*i;
+            f=f*a;
+               a--;
         }
-        i=i-1;
      screen.value=f;
+        }
+    if(a<0)
+           alert("factorial is not defined");
     }
 //delete input one by one
     function backspc()
@@ -101,12 +99,18 @@ var screen=document.querySelector('#screen');
            //octal to decimal conversion 
          function octtodec(){
         var a=screen.value,k=0,b=0;
+                if(btntext!=9){
         while(a){
         b=b+a%10*(8**k);
         k++;
         a=parseInt(a/10);
         }
         screen.value=b;
+                }
+                else{
+                       alert("invalid reenter");
+                clrdisp();
+                }
          }
 //decimal to binary conversion
          function dectobin(){
