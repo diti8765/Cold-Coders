@@ -99,18 +99,12 @@ var screen=document.querySelector('#screen');
            //octal to decimal conversion 
          function octtodec(){
         var a=screen.value,k=0,b=0;
-                if(btntext!=9){
         while(a){
         b=b+a%10*(8**k);
         k++;
         a=parseInt(a/10);
         }
         screen.value=b;
-                }
-                else{
-                       alert("invalid reenter");
-                clrdisp();
-                }
          }
 //decimal to binary conversion
          function dectobin(){
