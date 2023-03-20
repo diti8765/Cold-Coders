@@ -1,3 +1,4 @@
+//to function the buttons
 var screen=document.querySelector('#screen');
        var btn=document.querySelectorAll('.btn');
   for(item of btn)
@@ -15,6 +16,7 @@ var screen=document.querySelector('#screen');
        screen.value+=btntext;
     });
 }
+
     function sin()
     {
      screen.value=Math.sin(screen.value);
@@ -27,20 +29,23 @@ var screen=document.querySelector('#screen');
     {
      screen.value=Math.tan(screen.value);
     }
-    // 
+    // a no. raise to the power other
     function pow()
     {
            var a=parseFloat(document.getElementById("screen1").value),b=parseFloat(document.getElementById("screen2").value);
      screen.value=a**b;
     }
+//square of a number
     function pow()
     {
-     screen.value=Math.pow(screen.value,2);
+           var a=screen.value;
+     screen.value=a**2;
     }
-
+//square root of any number
     function sqrt()
     {
-     screen.value=Math.sqrt(screen.value,2);
+           var a=screen.value;
+     screen.value=a**0.5;
     }
     function log()
     {
@@ -50,10 +55,13 @@ var screen=document.querySelector('#screen');
     {
      screen.value= 3.14159265359;
     }
+
     function e()
     {
-     screen.value= 2.718281828459045;
+           var a=screen.value;
+     screen.value= 2.718281828459045**a;
     }
+//factorial of a no.
     function fact()
     {
         var i, num,f;
@@ -66,11 +74,12 @@ var screen=document.querySelector('#screen');
         i=i-1;
      screen.value=f;
     }
+//delete input one by one
     function backspc()
     {
      screen.value=screen.value.substr(0,screen.value.length-1);
     }
-    
+    //hcf of two number
     function hcf(){
         var a=parseInt(document.getElementById("screen1").value),b=parseInt(document.getElementById("screen2").value),gcd;
         for(i=1;i<=(a<b?a:b);i++){
@@ -79,6 +88,7 @@ var screen=document.querySelector('#screen');
         }
         screen.value=gcd;
             }
+//lcm of two no.
             function lcm(){
         var a=parseInt(document.getElementById("screen1").value),b=parseInt(document.getElementById("screen2").value);
         for(i=(a>b?a:b);i<=a*b;i+=(a>b?a:b)){
@@ -88,7 +98,7 @@ var screen=document.querySelector('#screen');
         }
         screen.value=i;
             }
-            
+           //octal to decimal conversion 
          function octtodec(){
         var a=screen.value,k=0,b=0;
         while(a){
@@ -98,7 +108,7 @@ var screen=document.querySelector('#screen');
         }
         screen.value=b;
          }
-
+//decimal to binary conversion
          function dectobin(){
             var a=screen.value,k=0,b=0;
             while(a){
@@ -109,7 +119,7 @@ var screen=document.querySelector('#screen');
             screen.value=b;
              }
 
-
+//binary to decimal conversion
          function bintodec(){
         var a=screen.value,k=0,b=0;
         if(btntext==1||btntext==0){
@@ -125,15 +135,17 @@ var screen=document.querySelector('#screen');
         clrdisp();
         }
         }
-         function dectobin(){
+//decimal to octal conversion
+         function dectooct(){
         var a=screen.value,k=0,b=0;
         while(a){
-        b=b+a%2*(10**k);
+        b=b+a%8*(10**k);
         k++;
-        a=parseInt(a/2);
+        a=parseInt(a/8);
         }
         screen.value=b;
          }
+//nth term of fibbonacci series
          function fibbo(){
         var a=-1,b=1,c,n=screen.value,k=0;
         while(k<=n){
@@ -143,6 +155,7 @@ var screen=document.querySelector('#screen');
         }
         screen.value=c;
          }
+//nth term of ramanujan number
          function ramanujannum(){
         var a=screen.value,t=0;
         for(i=1729;t<a;i++){
@@ -159,7 +172,7 @@ var screen=document.querySelector('#screen');
         }
         }
          }
-            
+        //nth term of neilarmstrong number    
          function neilarmsnum(){
         var a=screen.value,t=0;
         for(i=1;t<a;i++){
@@ -177,34 +190,8 @@ var screen=document.querySelector('#screen');
         }
         }
          }
-
-//          function neilarmsnum(){
-//             var a=screen.value,sum=0;
-//             let temp = a;
-//             let temp1 = a;
-//             let count=0;
-//             while(temp1>0){
-//                 temp1=parseInt(temp1/10);
-//                 count++;
-//             }
-//             while(temp>0){
-//                 let remainder = temp % 10;
-//                 sum+=Math.pow(remainder, count);
-//                 temp=parseInt(temp/10);
-//             }
-//             if(sum==a){
-//             screen.value="Armstrong number";  
-//             }
-//             else{
-//             screen.value="Not an Armstrong number";
-//             }
-//          }
-
-
-
-
-
-         function isprime(){
+//to check a number is prime or not
+function isprime(){
         var a=parseInt(screen.value);
         for(i=2;i<=a;i++){
         if(a%i==0)
