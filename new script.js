@@ -160,45 +160,45 @@ var screen=document.querySelector('#screen');
         }
          }
             
-        //  function neilarmsnum(){
-        // var a=screen.value,t=0;
-        // for(i=1;t<a;i++){
-        // nod=i.toString().length;
-        // sum=0;
-        // temp=i;
-        // while(temp){
-        // b=temp%10;
-        // sum+=b**nod;
-        // temp=parseInt(temp/10);
-        // }
-        // if(sum==i){
-        // t++;
-        // screen.value=i;
-        // }
-        // }
-        //  }
-
          function neilarmsnum(){
-            var a=screen.value,sum=0;
-            let temp = a;
-            let temp1 = a;
-            let count=0;
-            while(temp1>0){
-                temp1=parseInt(temp1/10);
-                count++;
-            }
-            while(temp>0){
-                let remainder = temp % 10;
-                sum+=Math.pow(remainder, count);
-                temp=parseInt(temp/10);
-            }
-            if(sum==a){
-            screen.value="Armstrong number";  
-            }
-            else{
-            screen.value="Not an Armstrong number";
-            }
+        var a=screen.value,t=0;
+        for(i=1;t<a;i++){
+        nod=i.toString().length;
+        sum=0;
+        temp=i;
+        while(temp){
+        b=temp%10;
+        sum+=b**nod;
+        temp=parseInt(temp/10);
+        }
+        if(sum==i){
+        t++;
+        screen.value=i;
+        }
+        }
          }
+
+//          function neilarmsnum(){
+//             var a=screen.value,sum=0;
+//             let temp = a;
+//             let temp1 = a;
+//             let count=0;
+//             while(temp1>0){
+//                 temp1=parseInt(temp1/10);
+//                 count++;
+//             }
+//             while(temp>0){
+//                 let remainder = temp % 10;
+//                 sum+=Math.pow(remainder, count);
+//                 temp=parseInt(temp/10);
+//             }
+//             if(sum==a){
+//             screen.value="Armstrong number";  
+//             }
+//             else{
+//             screen.value="Not an Armstrong number";
+//             }
+//          }
 
 
 
